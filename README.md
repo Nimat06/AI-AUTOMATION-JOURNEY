@@ -58,3 +58,21 @@ inconsistent text formatting, mixed date formats, and duplicate rows.
 
 **Tools used:** pandas, openpyxl
 
+
+## email_report_system.py
+
+It reads production data, generates a summary report, and automatically emails it 
+framed as a daily production report sent to a recipient.
+
+**What it does:**
+- Reads production data from Excel into a DataFrame
+- Groups by `Production_Line` and `Shift`, calculating sum/mean/min/max of `Defective_Units`
+- Formats both summaries into a plain-text report
+- Sends the report via Gmail (using `smtplib` + an App Password) to a specified recipient
+
+**Input:** `production_data.xlsx`
+**Output:** an emailed report 
+
+**Tools used:** pandas, smtplib, email.message
+
+

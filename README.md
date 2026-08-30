@@ -76,3 +76,17 @@ framed as a daily production report sent to a recipient.
 **Tools used:** pandas, smtplib, email.message
 
 
+## production_report_automation.py
+
+This one pulls together everything I built this week. It takes messy 
+production data, cleans it up, summarizes it, makes a couple of charts, 
+and then emails the whole thing out as a report — no manual work needed 
+once it's running.
+
+Reads dirty_production_data.xlsx → cleans missing values/text/dates → 
+groups by line and shift → charts average units produced → builds a 
+multi-sheet Excel file → emails it with the file attached.
+
+Uses: pandas, matplotlib, openpyxl, smtplib
+
+

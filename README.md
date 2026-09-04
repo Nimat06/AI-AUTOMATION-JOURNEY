@@ -77,3 +77,18 @@ multi-sheet Excel file → emails it with the file attached.
 **Tools used:** pandas, matplotlib, openpyxl, smtplib
 
 
+## Weather Information App
+How does this work?
+You type in a city name. It gives you the current weather for that city.
+
+This one needed two separate API calls instead of one. The weather API doesn't understand city names at all. It only accepts latitude and longitude. So the first call goes to a geocoding API that converts the city name into coordinates. Only then can the second call actually get the weather.
+
+The main thing I wanted to practice here was chaining API calls together. That means taking the result from one API and using it as the input for a completely different API.
+
+
+### Example
+Enter a city name: Lagos
+
+Current temperature: 26.0°C
+
+Current windspeed: 14.5 km/h

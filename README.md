@@ -1,4 +1,4 @@
-# AI-AUTOMATION-JOURNEY
+# AI-JOURNEY
 This repo tracks my learning journey.
 
 ## calculator.py
